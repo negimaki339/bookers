@@ -3,24 +3,23 @@ class BooksController < ApplicationController
      @book = Book.new
   end
 
-  def top
-  end
+  
+  
   
   
   def show
-      
-      
+    @book = Book.find(params[:id])
   end
 
   def index
-      @books = Book.all
+      @book = Book.all
   end
 
   
   def create
-    book = Book.new(blog_params)
+    book = Book.new(book_params)
     book.save
-    redirect_to book_path(book.id)
+    redirect_to books_path(book.id)
   end
 
  
