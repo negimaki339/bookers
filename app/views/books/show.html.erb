@@ -1,14 +1,14 @@
    <p id="notice"></p>
    <p>
    <strong>Title:</strong>
-   <p><%= @book.title %></p>
-   <span>
+   <%= @book.title %>
+   
    </p>
    
    <p>
     <strong>Body:</strong>
-   <p><%= @book.body %></p>
-    </span>
+   <%= @book.body %>
+    
    </p>
    
    <%= link_to "edit", edit_book_path(@book.id) %>

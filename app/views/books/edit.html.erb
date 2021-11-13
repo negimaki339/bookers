@@ -2,14 +2,13 @@
     <h1>Editing Book</h1>
 
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
- <p>タイトル</p>
+ <p>Title</p>
   <%= f.text_field :title %>
-  <p>本文</p>
+  <p></p>
   <%= f.text_area :body %>
   <%= f.submit 'Update Book' %>
 <% end %>
 <%= link_to "show", book_path(@book.id) %>
-<%= link_to "Delete", book_path(@book), method: :delete %>
 <%= link_to "Back", books_path %>
 
 
