@@ -71,3 +71,6 @@ div.actions {
   margin-bottom: 10px;
 }
 
+div.field, div.actions {
+    margin-bottom: 10px;
+}

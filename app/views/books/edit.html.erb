@@ -1,23 +1,15 @@
 
     <h1>Editing Book</h1>
 
-<form class="edit_book" id="edit_book_33157" action="/books/33157" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="6YZmfeZguQdHrIaWgSakHJvMxAFOeLP455f6Gy2MWKXb0lF0+p1ASlAKLlR2K4hKX8tiE9B46tk25jhTd1Wj6g==">
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+ <p>タイトル</p>
+  <%= f.text_field :title %>
+  <p>本文</p>
+  <%= f.text_area :body %>
+  <%= f.submit 'Update Book' %>
+<% end %>
+<%= link_to "show", book_path(@book.id) %>
+<%= link_to "Delete", book_path(@book), method: :delete %>
+<%= link_to "Back", books_path %>
 
-  <div class="field">
-    <label for="book_title">Title</label>
-    <input class="book_title" type="text" value="" name="book[title]" id="book_title">
-  </div>
-
-  <div class="field">
-    <label for="book_body">Body</label>
-    <textarea class="book_body" name="book[body]" id="book_body"></textarea>
-  </div>
-
-  <div class="actions">
-    <input type="submit" name="commit" value="Update Book" data-disable-with="Update Book">
-  </div>
-</form>
-
-<a>Show</a> 
-<a href="/books">Back</a>
 
