@@ -43,10 +43,6 @@
  </div>
 
   <%= form_with model: @book, url:'/books', local:true do |f| %>
-  <form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
-    <input name="utf8" type="hidden" value="✓">
-    <input type="hidden" name="authenticity_token"
-     value="B1LuKHoueOz4jKCrEARi/kOx1m/GKpemnsyfO7pX+jRhUBMg23XddbYoG1sjMLqwteYjLJzO7cNdTmhxwlVtyQ==">
 
      <div class="field">
       <label for="book_title">Title</label>
@@ -59,11 +55,10 @@
     </div>
   
     <div class="actions">
-      <input type="submit" name="commit" value="Create Book" data-disable-with= <%= f.submit 'Create Book' %>
+    <%= f.submit 'Create Book' %>
     </div>
     <% end %>
    
-  </form>
 
     
   </body>
